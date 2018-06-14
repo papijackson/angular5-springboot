@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'cp UserManagementApp && mvn clean install'
+        sh 'cd UserManagementApp && mvn clean install'
       }
     }
   }
