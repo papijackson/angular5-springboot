@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { User } from './user.model';
 
 @Injectable()
-export class  UserService {
+export class UserService {
   baseUrl = 'http://localhost:8080/';
 
   constructor(private http:HttpClient) { }
@@ -12,10 +12,6 @@ export class  UserService {
 
   public getUsers(): Observable<User[]> {
      return this.http.get<User[]>(this.baseUrl +'users');
-  }
-
-  public getUserById(id:string):Observable<User> {
-     return this.http.get<User>(this.baseUrl +'users/'+id);
   }
 
 }

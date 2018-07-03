@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { User } from '../user.model';
 import { UserService } from '../user.service';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-list',
@@ -25,8 +24,6 @@ export class UserListComponent implements OnInit {
   ];
   rows:User[];
 
-  selected = [];
-
   users = [{
     "id":1,
     "username":"papijackson"
@@ -41,8 +38,7 @@ export class UserListComponent implements OnInit {
     "username":"papijackson"
   }];
 
-  constructor(private userService:UserService,private route: ActivatedRoute,
-  private router: Router) { }
+  constructor(private userService:UserService) { }
 
   ngOnInit() {
   /*  this.userService.getUsers().subscribe(data => {
@@ -53,15 +49,6 @@ export class UserListComponent implements OnInit {
         this.rows = data;
       });
 
-  }
-
-  createUser(){
-    this.router.navigate(['../user'], {relativeTo: this.route});
-  }
-
-  onSelect(selected){
-     console.log('Select Event', selected, this.selected);
-     this.router.navigate(['../user/'+this.selected[0].id], {relativeTo: this.route});
   }
 
 }

@@ -8,7 +8,6 @@ import { HighlightJsModule, HIGHLIGHT_JS } from 'angular-highlight-js';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from './user.service';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { UserEditComponent } from './user-edit/user-edit.component';
 
 @NgModule({
   imports: [
@@ -39,7 +38,7 @@ import { UserEditComponent } from './user-edit/user-edit.component';
     MatMenuModule
 
   ],
-  declarations: [UserListComponent, UserEditComponent],
+  declarations: [UserListComponent],
   providers:[UserService]
 })
 export class UserModule { }
