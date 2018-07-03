@@ -1,0 +1,27 @@
+<div fxLayout="column"  class="components-container-gt-xs"  [ngClass.xs]="'components-container-xs'">
+
+<mat-toolbar-row class="mat-toolbar  mat-toolbar-single-row">
+    <span>Users</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button >
+      <mat-icon (click)="createUser()" aria-label="Example icon-button with a heart icon">create</mat-icon>
+    </button>
+  </mat-toolbar-row>
+
+      <ngx-datatable id="myId" [rows]="rows" class="material"
+      [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="'auto'"
+        [reorderable]="reorderable"
+        (select)="onSelect($event)"
+        [selected]="selected"
+        [selectionType]="'single'"
+        >
+       <ngx-datatable-column name="Id"></ngx-datatable-column>
+       <ngx-datatable-column name="Username"></ngx-datatable-column>
+       <ngx-datatable-column name="First name" prop="firstname"></ngx-datatable-column>
+       <ngx-datatable-column name="Last name" prop="lastname"></ngx-datatable-column>
+       <ngx-datatable-column name="Age" prop="age"></ngx-datatable-column>
+      </ngx-datatable>
+</div>
