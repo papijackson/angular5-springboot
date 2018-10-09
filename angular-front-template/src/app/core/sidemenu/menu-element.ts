@@ -7,8 +7,15 @@ export const menus = [
       "chip"   :  { "value": 1,'color': 'accent'} ,
       "sub"    :  [
                       {
-                          "name": "User lists",
+                          "name": "User list v1",
                           "link": "user/users",
+                          "icon": "dashboard",
+                          "chip"   : false,
+                          "open"   : true,
+                      },
+                      {
+                          "name": "User list v2",
+                          "link": "user/users2",
                           "icon": "dashboard",
                           "chip"   : false,
                           "open"   : true,
