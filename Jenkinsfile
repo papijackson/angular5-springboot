@@ -15,11 +15,4 @@ agent none
             }
         }
     }
-  stages {
-    stage('Build') {
-      steps {
-        sh 'cd UserManagementApp && mvn clean install'
-      }
-    }
-  }
 }
