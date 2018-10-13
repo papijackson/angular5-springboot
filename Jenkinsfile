@@ -23,4 +23,3 @@ agent none
         }
     }
   }
-}
